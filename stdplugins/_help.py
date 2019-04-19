@@ -65,6 +65,7 @@ async def _(event):
         uptime_string = str(timedelta(seconds = uptime_seconds))
         cpu = cpuinfo.get_cpu_info()['brand'] #psutil.cpu_freq(percpu=False)
         d = psutil.disk_usage('/')
+        mem = psutil.virtual_memory()
     start_string = """
     ```Status :``` Online ```{}```ms
 ```Dc : 5 IE``` 
@@ -74,7 +75,8 @@ Telethon : {}```
 ```Uptime :``` {} 
 ```Cpuinfo :``` {}
 ```Disk_usage :``` {}/100
+```RAM :``` {}
 [I DEMAND RIGHTS FOR US BOTS, WE ARE EQUAL TO YOU HUMANS](https://media.giphy.com/media/QBhHWO0E9GTIY/giphy.gif)""".format(ms,
         sys.version,
-        __version__,len(borg._plugins),uptime_string,cpu,d.percent)
+        __version__,len(borg._plugins),uptime_string,cpu,d.percent,mem)
     await event.edit(start_string,link_preview=True)
