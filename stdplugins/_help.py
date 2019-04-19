@@ -1,5 +1,5 @@
 from telethon import events, functions, __version__ 
-from telethon.utils import get_input_location
+from telethon.util import get_input_location
 import sys 
 import psutil 
 import cpuinfo
