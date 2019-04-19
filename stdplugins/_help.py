@@ -65,7 +65,7 @@ async def _(event):
         uptime_string = str(timedelta(seconds = uptime_seconds))
         cpu = cpuinfo.get_cpu_info()['brand'] #psutil.cpu_freq(percpu=False)
         d = psutil.disk_usage('/')
-    help_string = """
+    start_string = """
     ```Status :``` Online ```{}```ms
 ```Dc : 5 IE``` 
 ```Python : {}
@@ -77,10 +77,7 @@ Telethon : {}```
 [I DEMAND RIGHTS FOR US BOTS, WE ARE EQUAL TO YOU HUMANS](https://telegra.ph/file/a40c982e973fe07ed528a.mp4)""".format(ms,
         sys.version,
         __version__,len(borg._plugins),uptime_string,cpu,d.percent)
-    
-    
-        await event.edit(help_string,link_preview=True)
-
+await event.edit(help_string,link_preview=True)
 
 @borg.on(admin_cmd("dc"))  # pylint:disable=E0602
 async def _(event):
