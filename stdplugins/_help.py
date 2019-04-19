@@ -74,7 +74,7 @@ Telethon : {}```
 ```Uptime :``` {} 
 ```Cpuinfo :``` {}
 ```Disk_usage :``` {}/100
-[I DEMAND RIGHTS FOR US BOTS, WE ARE EQUAL TO YOU HUMANS](https://telegra.ph/file/a40c982e973fe07ed528a.mp4)""".format(ms,
+[I DEMAND RIGHTS FOR US BOTS, WE ARE EQUAL TO YOU HUMANS](https://media.giphy.com/media/QBhHWO0E9GTIY/giphy.gif)""".format(ms,
         sys.version,
         __version__,len(borg._plugins),uptime_string,cpu,d.percent)
     await event.edit(start_string,link_preview=True)
