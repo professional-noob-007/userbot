@@ -78,10 +78,3 @@ Telethon : {}```
         sys.version,
         __version__,len(borg._plugins),uptime_string,cpu,d.percent)
 await event.edit(help_string,link_preview=True)
-
-@borg.on(admin_cmd("dc"))  # pylint:disable=E0602
-async def _(event):
-    if event.fwd_from:
-        return
-    result = await borg(functions.help.GetNearestDcRequest())
-    await event.edit(result.stringify())
