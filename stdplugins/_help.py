@@ -1,8 +1,8 @@
-from telethon import events, functions, __version__ 
-from telethon.utils import get_input_location
 import sys 
 import psutil 
 import cpuinfo
+from telethon import events, functions, __version__ 
+from telethon.utils import get_input_location
 from datetime import datetime, timedelta
 from uniborg.util import admin_cmd
 
